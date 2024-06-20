@@ -7,4 +7,4 @@ docker pull registry.cn-hangzhou.aliyuncs.com/robot_007/portainer-ce
 ```
 docker run -d -p 8000:9000 --name=portainer --restart=always -v /var/run/docker.sock:/var/run/docker.sock -e LANG=zh registry.cn-hangzhou.aliyuncs.com/robot_007/portainer-ce
 ```
-![image](https://github.com/ROBOT008/ROBOT008.github.io/assets/28344308/3690f2e9-1ae8-4404-9295-91624db860bb)
+![image](https://video007.oss-cn-shenzhen.aliyuncs.com/github/1.png)
