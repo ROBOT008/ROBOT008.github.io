@@ -1,5 +1,20 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>ROBOT008-博客园</title><link>https://ROBOT008.github.io</link><description>by ROBOT007资源</description><copyright>ROBOT008-博客园</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://thirdwx.qlogo.cn/mmopen/vi_32/PiajxSqBRaEIibpm7zAVd4z7xmHfHfm3ue1xwoOM8qcia94wGiaicTmnPlNTNjpxBOEjvNbBnjvt2tibiaA6xQmPTKelicTOT6kasRZhSv0AFiclJVfelfOFDHqibVcg/132</url><title>avatar</title><link>https://ROBOT008.github.io</link></image><lastBuildDate>Thu, 20 Jun 2024 03:54:34 +0000</lastBuildDate><managingEditor>ROBOT008-博客园</managingEditor><ttl>60</ttl><webMaster>ROBOT008-博客园</webMaster><item><title>docker安装sqlserver2019</title><link>https://ROBOT008.github.io/post/docker-an-zhuang-sqlserver2019.html</link><description>1. 登录阿里云获取个人仓库镜像源&#13;
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>ROBOT008-博客园</title><link>https://ROBOT008.github.io</link><description>by ROBOT007资源</description><copyright>ROBOT008-博客园</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://thirdwx.qlogo.cn/mmopen/vi_32/PiajxSqBRaEIibpm7zAVd4z7xmHfHfm3ue1xwoOM8qcia94wGiaicTmnPlNTNjpxBOEjvNbBnjvt2tibiaA6xQmPTKelicTOT6kasRZhSv0AFiclJVfelfOFDHqibVcg/132</url><title>avatar</title><link>https://ROBOT008.github.io</link></image><lastBuildDate>Thu, 20 Jun 2024 03:57:28 +0000</lastBuildDate><managingEditor>ROBOT008-博客园</managingEditor><ttl>60</ttl><webMaster>ROBOT008-博客园</webMaster><item><title>docker</title><link>https://ROBOT008.github.io/post/docker.html</link><description>1. 登录阿里云获取个人仓库镜像源&#13;
+2. 拉取Portainer-ce镜像&#13;
+```&#13;
+docker pull registry.cn-hangzhou.aliyuncs.com/robot_007/mysql:5.7&#13;
+```&#13;
+3. 创建仓库并启动&#13;
+```&#13;
+docker run --name mysql5.7 -p 3306:3306 -e MYSQL_ROOT_PASSWORD='root1234!@#' -v /root/docker/mysql/data:/var/lib/mysql -v /root/docker/mysql/conf:/etc/mysql/conf.d  -d registry.cn-hangzhou.aliyuncs.com/robot_007/mysql:5.7&#13;
+```&#13;
+4.进入容器并设置mysql远程登录&#13;
+```&#13;
+docker exec -it mysql5.7 bash&#13;
+mysql -u root -p&#13;
+GRANT ALL ON *.* TO 'root'@'%' IDENTIFIED BY 'root1234!@#' WITH GRANT OPTION;&#13;
+FLUSH PRIVILEGES;&#13;
+```。</description><guid isPermaLink="true">https://ROBOT008.github.io/post/docker.html</guid><pubDate>Thu, 20 Jun 2024 03:57:00 +0000</pubDate></item><item><title>docker安装sqlserver2019</title><link>https://ROBOT008.github.io/post/docker-an-zhuang-sqlserver2019.html</link><description>1. 登录阿里云获取个人仓库镜像源&#13;
 2. 拉取sqlserver镜像&#13;
 ```&#13;
 docker pull registry.cn-hangzhou.aliyuncs.com/robot_007/server:2019-latest&#13;
