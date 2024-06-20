@@ -1,5 +1,13 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>ROBOT008-博客园</title><link>https://ROBOT008.github.io</link><description>by ROBOT007资源</description><copyright>ROBOT008-博客园</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://thirdwx.qlogo.cn/mmopen/vi_32/PiajxSqBRaEIibpm7zAVd4z7xmHfHfm3ue1xwoOM8qcia94wGiaicTmnPlNTNjpxBOEjvNbBnjvt2tibiaA6xQmPTKelicTOT6kasRZhSv0AFiclJVfelfOFDHqibVcg/132</url><title>avatar</title><link>https://ROBOT008.github.io</link></image><lastBuildDate>Thu, 20 Jun 2024 03:34:01 +0000</lastBuildDate><managingEditor>ROBOT008-博客园</managingEditor><ttl>60</ttl><webMaster>ROBOT008-博客园</webMaster><item><title>docker安装jenkins</title><link>https://ROBOT008.github.io/post/docker-an-zhuang-jenkins.html</link><description>1. 登录阿里云获取个人仓库镜像源&#13;
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>ROBOT008-博客园</title><link>https://ROBOT008.github.io</link><description>by ROBOT007资源</description><copyright>ROBOT008-博客园</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://thirdwx.qlogo.cn/mmopen/vi_32/PiajxSqBRaEIibpm7zAVd4z7xmHfHfm3ue1xwoOM8qcia94wGiaicTmnPlNTNjpxBOEjvNbBnjvt2tibiaA6xQmPTKelicTOT6kasRZhSv0AFiclJVfelfOFDHqibVcg/132</url><title>avatar</title><link>https://ROBOT008.github.io</link></image><lastBuildDate>Thu, 20 Jun 2024 03:38:54 +0000</lastBuildDate><managingEditor>ROBOT008-博客园</managingEditor><ttl>60</ttl><webMaster>ROBOT008-博客园</webMaster><item><title>docker安装portainer-ce</title><link>https://ROBOT008.github.io/post/docker-an-zhuang-portainer-ce.html</link><description>1. 登录阿里云获取个人仓库镜像源&#13;
+2. 拉取Portainer-ce镜像&#13;
+```&#13;
+docker pull registry.cn-hangzhou.aliyuncs.com/robot_007/portainer-ce&#13;
+```&#13;
+3. 创建仓库并启动&#13;
+```&#13;
+docker run -d -p 8000:9000 --name=portainer --restart=always -v /var/run/docker.sock:/var/run/docker.sock -e LANG=zh registry.cn-hangzhou.aliyuncs.com/robot_007/portainer-ce&#13;
+```。</description><guid isPermaLink="true">https://ROBOT008.github.io/post/docker-an-zhuang-portainer-ce.html</guid><pubDate>Thu, 20 Jun 2024 03:38:30 +0000</pubDate></item><item><title>docker安装jenkins</title><link>https://ROBOT008.github.io/post/docker-an-zhuang-jenkins.html</link><description>1. 登录阿里云获取个人仓库镜像源&#13;
 2. 拉取Jenkins镜像&#13;
 ```&#13;
 docker pull registry.cn-hangzhou.aliyuncs.com/robot_007/jenkins:lts&#13;
