@@ -1,5 +1,35 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>ROBOT008-博客园</title><link>https://ROBOT008.github.io</link><description>by ROBOT007资源</description><copyright>ROBOT008-博客园</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://thirdwx.qlogo.cn/mmopen/vi_32/PiajxSqBRaEIibpm7zAVd4z7xmHfHfm3ue1xwoOM8qcia94wGiaicTmnPlNTNjpxBOEjvNbBnjvt2tibiaA6xQmPTKelicTOT6kasRZhSv0AFiclJVfelfOFDHqibVcg/132</url><title>avatar</title><link>https://ROBOT008.github.io</link></image><lastBuildDate>Thu, 20 Jun 2024 03:03:07 +0000</lastBuildDate><managingEditor>ROBOT008-博客园</managingEditor><ttl>60</ttl><webMaster>ROBOT008-博客园</webMaster><item><title>甜蜜</title><link>https://ROBOT008.github.io/post/tian-mi.html</link><description>```&#13;
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>ROBOT008-博客园</title><link>https://ROBOT008.github.io</link><description>by ROBOT007资源</description><copyright>ROBOT008-博客园</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://thirdwx.qlogo.cn/mmopen/vi_32/PiajxSqBRaEIibpm7zAVd4z7xmHfHfm3ue1xwoOM8qcia94wGiaicTmnPlNTNjpxBOEjvNbBnjvt2tibiaA6xQmPTKelicTOT6kasRZhSv0AFiclJVfelfOFDHqibVcg/132</url><title>avatar</title><link>https://ROBOT008.github.io</link></image><lastBuildDate>Thu, 20 Jun 2024 03:22:48 +0000</lastBuildDate><managingEditor>ROBOT008-博客园</managingEditor><ttl>60</ttl><webMaster>ROBOT008-博客园</webMaster><item><title>Centos安装docker</title><link>https://ROBOT008.github.io/post/Centos-an-zhuang-docker.html</link><description>1. 删除旧版及本地docker源&#13;
+```&#13;
+yum remove docker  docker-client docker-client-latest docker-common docker-latest docker-latest-logrotate docker-logrotate       &#13;
+ docker-selinux docker-engine-selinux  docker-engine docker-ce&#13;
+```&#13;
+2. 安装环境&#13;
+```&#13;
+yum install -y yum-utils   device-mapper-persistent-data  lvm2 --skip-broken&#13;
+```&#13;
+3. 设置docker镜像源&#13;
+```&#13;
+yum-config-manager --add-repo  https://mirrors.aliyun.com/docker-ce/linux/centos/docker-ce.repo&#13;
+sed -i 's/download.docker.com/mirrors.aliyun.com\/docker-ce/g' /etc/yum.repos.d/docker-ce.repo&#13;
+yum makecache fast&#13;
+```&#13;
+4. 安装docker&#13;
+```&#13;
+yum install -y docker-ce&#13;
+```&#13;
+5. 查看安装是否成功&#13;
+```&#13;
+docker images&#13;
+```&#13;
+6. 启动&amp;配置网关&#13;
+```&#13;
+systemctl stop firewalld # 禁止开机启动防火墙&#13;
+systemctl disable firewalld&#13;
+systemctl start docker  # 启动docker服务&#13;
+systemctl stop docker  # 停止docker服务&#13;
+systemctl restart docker  # 重启docker服务&#13;
+```。</description><guid isPermaLink="true">https://ROBOT008.github.io/post/Centos-an-zhuang-docker.html</guid><pubDate>Thu, 20 Jun 2024 03:22:23 +0000</pubDate></item><item><title>甜蜜</title><link>https://ROBOT008.github.io/post/tian-mi.html</link><description>```&#13;
 &gt; 拥有父母的爱，&#13;
 &gt; 是甜蜜的。</description><guid isPermaLink="true">https://ROBOT008.github.io/post/tian-mi.html</guid><pubDate>Thu, 20 Jun 2024 02:47:26 +0000</pubDate></item><item><title>9996</title><link>https://ROBOT008.github.io/post/9996.html</link><description>_6123123_&#13;
 ### 123123。</description><guid isPermaLink="true">https://ROBOT008.github.io/post/9996.html</guid><pubDate>Thu, 20 Jun 2024 01:56:39 +0000</pubDate></item></channel></rss>
