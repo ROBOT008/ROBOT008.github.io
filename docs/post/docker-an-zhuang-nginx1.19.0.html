@@ -10,10 +10,52 @@
         document.documentElement.setAttribute("data-color-mode", theme);
     </script>
 <meta name="description" content="1. 登录阿里云获取个人仓库镜像源
-2. 拉取nginx1.19.0镜像。">
+2. 拉取nginx1.19.0镜像
+```
+docker pull registry.cn-hangzhou.aliyuncs.com/robot_007/nginx:1.19.0
+```
+
+3. 创建仓库并启动
+```
+docker run --name nginx -p 80:80 -d registry.cn-hangzhou.aliyuncs.com/robot_007/nginx:1.19.0
+```
+
+4. 复制文件到宿主电脑
+```
+docker cp nginx:/etc/nginx/nginx.conf /root/tools/nginx/conf/nginx.conf
+docker cp nginx:/etc/nginx/conf.d /root/tools/nginx/conf/conf.d
+docker cp nginx:/usr/share/nginx/html /root/tools/nginx/html
+docker cp nginx:/var/log/nginx/ /root/tools/nginx/logs
+```
+
+5. 重新创建仓库并启动
+```
+ocker run  --name nginx -d -p 80:80 -v /root/tools/nginx/html:/usr/share/nginx/html -v /root/tools/nginx/conf/nginx.conf:/etc/nginx/nginx.conf -v /root/tools/nginx/logs:/var/log/nginx registry.cn-hangzhou.aliyuncs.com/robot_007/nginx:1.19.0
+```。">
 <meta property="og:title" content="docker安装nginx1.19.0">
 <meta property="og:description" content="1. 登录阿里云获取个人仓库镜像源
-2. 拉取nginx1.19.0镜像。">
+2. 拉取nginx1.19.0镜像
+```
+docker pull registry.cn-hangzhou.aliyuncs.com/robot_007/nginx:1.19.0
+```
+
+3. 创建仓库并启动
+```
+docker run --name nginx -p 80:80 -d registry.cn-hangzhou.aliyuncs.com/robot_007/nginx:1.19.0
+```
+
+4. 复制文件到宿主电脑
+```
+docker cp nginx:/etc/nginx/nginx.conf /root/tools/nginx/conf/nginx.conf
+docker cp nginx:/etc/nginx/conf.d /root/tools/nginx/conf/conf.d
+docker cp nginx:/usr/share/nginx/html /root/tools/nginx/html
+docker cp nginx:/var/log/nginx/ /root/tools/nginx/logs
+```
+
+5. 重新创建仓库并启动
+```
+ocker run  --name nginx -d -p 80:80 -v /root/tools/nginx/html:/usr/share/nginx/html -v /root/tools/nginx/conf/nginx.conf:/etc/nginx/nginx.conf -v /root/tools/nginx/logs:/var/log/nginx registry.cn-hangzhou.aliyuncs.com/robot_007/nginx:1.19.0
+```。">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ROBOT008.github.io/post/docker-an-zhuang-nginx1.19.0.html">
 <meta property="og:image" content="https://thirdwx.qlogo.cn/mmopen/vi_32/PiajxSqBRaEIibpm7zAVd4z7xmHfHfm3ue1xwoOM8qcia94wGiaicTmnPlNTNjpxBOEjvNbBnjvt2tibiaA6xQmPTKelicTOT6kasRZhSv0AFiclJVfelfOFDHqibVcg/132">
@@ -75,7 +117,27 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 <div class="markdown-body" id="postBody"><ol>
 <li>登录阿里云获取个人仓库镜像源</li>
 <li>拉取nginx1.19.0镜像</li>
-</ol></div>
+</ol>
+<pre class="notranslate"><code class="notranslate">docker pull registry.cn-hangzhou.aliyuncs.com/robot_007/nginx:1.19.0
+</code></pre>
+<ol start="3">
+<li>创建仓库并启动</li>
+</ol>
+<pre class="notranslate"><code class="notranslate">docker run --name nginx -p 80:80 -d registry.cn-hangzhou.aliyuncs.com/robot_007/nginx:1.19.0
+</code></pre>
+<ol start="4">
+<li>复制文件到宿主电脑</li>
+</ol>
+<pre class="notranslate"><code class="notranslate">docker cp nginx:/etc/nginx/nginx.conf /root/tools/nginx/conf/nginx.conf
+docker cp nginx:/etc/nginx/conf.d /root/tools/nginx/conf/conf.d
+docker cp nginx:/usr/share/nginx/html /root/tools/nginx/html
+docker cp nginx:/var/log/nginx/ /root/tools/nginx/logs
+</code></pre>
+<ol start="5">
+<li>重新创建仓库并启动</li>
+</ol>
+<pre class="notranslate"><code class="notranslate">ocker run  --name nginx -d -p 80:80 -v /root/tools/nginx/html:/usr/share/nginx/html -v /root/tools/nginx/conf/nginx.conf:/etc/nginx/nginx.conf -v /root/tools/nginx/logs:/var/log/nginx registry.cn-hangzhou.aliyuncs.com/robot_007/nginx:1.19.0
+</code></pre></div>
 <div style="font-size:small;margin-top:8px;float:right;"></div>
 
 <button class="btn btn-block" type="button" onclick="openComments()" id="cmButton">评论</button>
